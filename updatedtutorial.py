@@ -33,7 +33,7 @@ def display_images(image_data, fetch_image_with_fallback, selected_base_urls):
                         if image:
                             # Create a clean caption and link name
                             caption = f"{section}_{idx + 1:03}"
-                            st.image(image, caption=caption, use_column_width=True)
+                            st.image(image, caption=caption, use_container_width=True)
                             # Use st.markdown to create a link that opens in a new tab
                             st.markdown(f'<a href="{new_url}" target="_blank">Open {caption}</a>', unsafe_allow_html=True)
                             break  # Stop trying other base URLs if one succeeds
